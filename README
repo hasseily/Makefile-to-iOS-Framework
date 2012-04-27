@@ -1,0 +1,26 @@
+This package allows a programmer to compile a Makefile-based project
+for the following platforms:
+  - iOS Simulator (i386)
+  - iOS Devices (armv6 and armv7)
+  - iOS Framework (fat framework: i386, armv6 and armv7)
+
+How to use the package:
+
+- Copy the Canonical.Framework.tar and makeframework.sh files to
+  the directory containing the makefile that you want to use
+
+- Go to the directory containing the makefile and run makeframework.sh
+
+Example:
+
+./makeframework.sh -v 1.6.7 framework --disable-gost --disable-sha2 --without-ssl
+
+This will configure and make the project into a static library framework
+using the options "--disable-gost --disable-sha2 --without-ssl",
+and give it version number 1.6.7.
+
+The output will be located in ${HOME}/compiles/iPhoneFramework
+
+--
+Henri Asseily
+henri.tel
